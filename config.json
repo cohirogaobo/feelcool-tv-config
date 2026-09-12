@@ -1,18 +1,18 @@
 {
   "user": {
-    "name": "gaobo",
-    "avatar_url": "https://ui-avatars.com/api/?name=GB&background=0A84FF&color=fff"
+    "name": "扣扣扣漏",
+    "avatar_url": "https://feelcool.netlify.app/assets/GB.jpg"
   },
   "api": {
-    "trakt_username": "gaobo",
-    "trakt_client_id": "替换为你的_Trakt_Client_ID",
     "tmdb_api_key": "f7762624a95e4c3823500736d40162cd"
   },
-  "player_actions": {
-    "default_trakt_player": "app:com.vidhub.tv",
-    "default_iptv_player": "app:com.netease.popcorn"
+  "now_watching": {
+    "tmdb_id": 95396,
+    "type": "tv", 
+    "season": 1,
+    "episode": 4
   },
-  "iptv": {
-    "epg_json_url": "https://raw.githubusercontent.com/cohirogaobo/feelcool-tv-config/main/epg.json"
+  "player_actions": {
+    "default_media_player": "app:com.vidhub.tv"
   }
 }
