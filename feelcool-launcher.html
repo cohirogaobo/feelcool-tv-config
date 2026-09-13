@@ -6,8 +6,8 @@
     <title>Feel Cool TV - Launcher</title>
     <style>
         :root {
-            --glass-bg: rgba(30, 30, 30, 0.55);
-            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-bg: rgba(30, 30, 30, 0.45);
+            --glass-border: rgba(255, 255, 255, 0.05);
             --focus-scale: 1.05;
             --animation-speed: 0.3s;
         }
@@ -20,6 +20,7 @@
         }
 
         .base-layer { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #050505; z-index: -2; }
+        
         .hero-background {
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
             background-size: cover; background-position: center;
@@ -29,49 +30,68 @@
 
         .hero-overlay {
             position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 100%),
-                        linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 40%, transparent 100%);
+            background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%),
+                        linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.1) 40%, transparent 100%);
             z-index: 1; transition: background 0.8s ease;
         }
 
-        /* ======== 侧边栏全面缩小 ======== */
-        .sidebar {
-            position: fixed; left: 20px; top: 20px; bottom: 20px; width: 220px; /* 原为 280px */
-            background: var(--glass-bg); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-            border-radius: 20px; border: 1px solid var(--glass-border); z-index: 10;
-            display: flex; flex-direction: column; padding: 15px 10px; box-sizing: border-box;
+        /* ======== 全局右上角时钟 ======== */
+        .top-clock {
+            position: fixed; top: 35px; right: 45px; z-index: 20;
+            font-size: 16px; font-weight: 500; color: rgba(255,255,255,0.8);
+            font-variant-numeric: tabular-nums; text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            letter-spacing: 0.5px;
         }
-        .user-profile { display: flex; align-items: center; padding: 5px 10px; margin-bottom: 15px; }
-        .user-avatar { width: 36px; height: 36px; border-radius: 50%; background: #555; margin-right: 12px; overflow: hidden; border: 1.5px solid rgba(255,255,255,0.1); }
+
+        /* ======== 侧边栏更加贴边 ======== */
+        .sidebar {
+            position: fixed; left: 15px; top: 15px; bottom: 15px; width: 220px;
+            background: var(--glass-bg); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
+            border-radius: 20px; border: 1px solid var(--glass-border); z-index: 10;
+            display: flex; flex-direction: column; padding: 15px 8px; box-sizing: border-box;
+        }
+        .user-profile { display: flex; align-items: center; padding: 5px 10px; margin-bottom: 20px; }
+        .user-avatar { width: 34px; height: 34px; border-radius: 50%; background: #444; margin-right: 12px; overflow: hidden; border: 1.5px solid rgba(255,255,255,0.15); }
         .user-avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .user-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-        .user-name { font-size: 15px; font-weight: 600; line-height: 1.2; }
-        .time { font-size: 12px; color: rgba(255,255,255,0.5); font-variant-numeric: tabular-nums; line-height: 1.2; }
+        .user-name { font-size: 16px; font-weight: 600; line-height: 1.2; letter-spacing: 0.3px; }
         
-        .nav-list { display: flex; flex-direction: column; gap: 4px; padding: 0 5px; }
+        .nav-list { display: flex; flex-direction: column; gap: 4px; padding: 0 4px; }
         .nav-item { display: flex; align-items: center; padding: 10px 12px; border-radius: 12px; font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.65); cursor: pointer; outline: none; transition: all var(--animation-speed) ease; }
         .nav-item svg { width: 20px; height: 20px; margin-right: 12px; fill: currentColor; opacity: 0.8; }
-        .nav-item:focus, .nav-item.focused { background-color: #fff; color: #000; transform: scale(1.05); box-shadow: 0 8px 24px rgba(0,0,0,0.25); z-index: 2; }
-        .nav-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 12px 10px; }
+        
+        /* 苹果 Vibrancy 呼吸感高亮状态 */
+        .nav-item:focus, .nav-item.focused { 
+            background-color: rgba(255, 255, 255, 0.75); 
+            backdrop-filter: blur(12px) saturate(120%); 
+            -webkit-backdrop-filter: blur(12px) saturate(120%);
+            color: rgba(0, 0, 0, 0.9); 
+            transform: scale(1.04); 
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2); 
+            z-index: 2; 
+        }
+        
+        .nav-divider { height: 1px; background: rgba(255,255,255,0.06); margin: 12px 10px; }
         .nav-section-title { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1.5px; margin: 0 10px 8px 10px; }
 
-        /* ======== 主内容区缩小 ======== */
-        .main-content { position: absolute; left: 260px; top: 0; right: 0; bottom: 0; z-index: 2; display: flex; flex-direction: column; justify-content: flex-end; padding: 45px 50px; box-sizing: border-box; }
-        .hero-text { margin-bottom: 35px; transition: opacity 0.4s ease; }
-        .brand-title { font-size: 15px; font-weight: 700; letter-spacing: 1px; color: rgba(255,255,255,0.7); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-        .main-title { font-size: 52px; font-weight: 800; margin: 0 0 8px 0; text-shadow: 0 4px 16px rgba(0,0,0,0.6); letter-spacing: -1px; line-height: 1.1; max-width: 80%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .sub-title { font-size: 18px; color: rgba(255,255,255,0.6); max-width: 600px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        /* ======== 主内容区靠左、聚合缩小 ======== */
+        .main-content { position: absolute; left: 240px; top: 0; right: 0; bottom: 0; z-index: 2; display: flex; flex-direction: column; justify-content: flex-end; padding: 40px 45px; box-sizing: border-box; }
+        .hero-text { margin-bottom: 30px; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; }
+        .brand-title { font-size: 14px; font-weight: 700; letter-spacing: 1px; color: rgba(255,255,255,0.6); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+        /* 标题缩小 */
+        .main-title { font-size: 42px; font-weight: 800; margin: 0 0 6px 0; text-shadow: 0 4px 16px rgba(0,0,0,0.6); letter-spacing: -0.5px; line-height: 1.15; max-width: 75%; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        /* 副标题缩小 */
+        .sub-title { font-size: 15px; color: rgba(255,255,255,0.55); max-width: 550px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-weight: 400; }
 
-        /* ======== 底部海报卡片缩小 ======== */
-        .carousel-container { width: 100%; height: 200px; overflow: visible; position: relative; }
-        .carousel-track { display: flex; gap: 24px; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); padding: 10px 0; }
-        .media-item { display: flex; flex-direction: column; gap: 10px; width: 230px; flex-shrink: 0; outline: none; }
-        .card-image-wrapper { width: 100%; height: 130px; border-radius: 12px; background-color: rgba(255,255,255,0.05); border: 2px solid transparent; position: relative; overflow: hidden; transition: transform var(--animation-speed) ease, border-color var(--animation-speed) ease; }
+        /* ======== 底部海报卡片 ======== */
+        .carousel-container { width: 100%; height: 180px; overflow: visible; position: relative; }
+        .carousel-track { display: flex; gap: 20px; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); padding: 5px 0; }
+        .media-item { display: flex; flex-direction: column; gap: 8px; width: 220px; flex-shrink: 0; outline: none; }
+        .card-image-wrapper { width: 100%; height: 124px; border-radius: 12px; background-color: rgba(255,255,255,0.05); border: 2px solid transparent; position: relative; overflow: hidden; transition: transform var(--animation-speed) ease, border-color var(--animation-speed) ease; }
         .card-image-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; }
-        .card-info { opacity: 0.5; transition: opacity var(--animation-speed) ease, transform var(--animation-speed) ease; transform: translateY(-5px); }
-        .card-title { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .card-meta { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
-        .media-item:focus .card-image-wrapper, .media-item.focused .card-image-wrapper { transform: scale(1.08); border-color: rgba(255,255,255,0.9); box-shadow: 0 16px 32px rgba(0,0,0,0.5); z-index: 10; }
+        .card-info { opacity: 0.5; transition: opacity var(--animation-speed) ease, transform var(--animation-speed) ease; transform: translateY(-3px); }
+        .card-title { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: 0.2px; }
+        .card-meta { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+        .media-item:focus .card-image-wrapper, .media-item.focused .card-image-wrapper { transform: scale(1.08); border-color: rgba(255,255,255,0.85); box-shadow: 0 16px 32px rgba(0,0,0,0.5); z-index: 10; }
         .media-item:focus .card-info, .media-item.focused .card-info { opacity: 1; transform: translateY(0); }
     </style>
 </head>
@@ -80,12 +100,14 @@
     <div class="hero-background" id="heroBg"></div>
     <div class="hero-overlay" id="heroOverlay"></div>
 
+    <!-- 全局独立时钟 -->
+    <div class="top-clock" id="topClock">--:--</div>
+
     <div class="sidebar">
         <div class="user-profile">
             <div class="user-avatar"><img id="uiAvatar" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="User"></div>
             <div class="user-info">
-                <span class="user-name" id="uiUserName">Loading...</span>
-                <span class="time" id="clock">--:--</span>
+                <span class="user-name" id="uiUserName">Loading</span>
             </div>
         </div>
 
@@ -103,46 +125,34 @@
     <div class="main-content">
         <div class="hero-text" id="heroText">
             <div class="brand-title" id="heroBrand">
-                <svg style="width:16px;height:16px;fill:#fff;" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+                <svg style="width:14px;height:14px;fill:#fff;" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
                 很酷 TV+
             </div>
-            <div class="sub-title" id="heroSub" style="color: #0A84FF; font-weight: 600; margin-bottom: 6px;">启动中</div>
+            <div class="sub-title" id="heroSub" style="color: #0A84FF; font-weight: 500; margin-bottom: 4px;">启动中</div>
             <h1 class="main-title" id="heroTitle">连接配置服务器...</h1>
         </div>
 
         <div class="carousel-container">
             <div class="carousel-track" id="carouselTrack">
                 
-                <!-- 卡片1：网易爆米花 -->
                 <div class="media-item focusable" id="card-popcorn" tabindex="0" data-row="5" data-col="0">
-                    <div class="card-image-wrapper">
-                        <img src="" alt="Popcorn">
-                    </div>
+                    <div class="card-image-wrapper"><img src="" alt="Popcorn"></div>
                     <div class="card-info">
-                        <div class="card-title">网易爆米花</div>
-                        <div class="card-meta">加载中</div>
+                        <div class="card-title">网易爆米花</div><div class="card-meta">加载中</div>
                     </div>
                 </div>
 
-                <!-- 卡片2：VidHub -->
                 <div class="media-item focusable" id="card-vidhub" tabindex="0" data-row="5" data-col="1">
-                    <div class="card-image-wrapper">
-                        <img src="" alt="VidHub">
-                    </div>
+                    <div class="card-image-wrapper"><img src="" alt="VidHub"></div>
                     <div class="card-info">
-                        <div class="card-title">VidHub</div>
-                        <div class="card-meta">加载中</div>
+                        <div class="card-title">VidHub</div><div class="card-meta">加载中</div>
                     </div>
                 </div>
 
-                <!-- 卡片3：电视直播 -->
                 <div class="media-item focusable" id="card-livetv" tabindex="0" data-row="5" data-col="2">
-                    <div class="card-image-wrapper">
-                        <img src="" alt="Live TV">
-                    </div>
+                    <div class="card-image-wrapper"><img src="" alt="Live TV"></div>
                     <div class="card-info">
-                        <div class="card-title">电视直播</div>
-                        <div class="card-meta">加载中</div>
+                        <div class="card-title">电视直播</div><div class="card-meta">加载中</div>
                     </div>
                 </div>
 
@@ -154,173 +164,169 @@
         // ==========================================
         // 这里填入你在 GitHub 上的 index.json 的 Raw 直链
         // ==========================================
-        const CONFIG_URL = "https://raw.githubusercontent.com/cohirogaobo/feelcool-tv-config/refs/heads/main/config.json"; 
+        var CONFIG_URL = "https://raw.githubusercontent.com/cohirogaobo/feelcool-tv-config/refs/heads/main/config.json"; 
         
-        let globalConfig = null;
-        const focusables = Array.from(document.querySelectorAll('.focusable'));
-        let currentFocusIndex = 2; // 默认聚焦 "很酷 TV+"
+        var globalConfig = null;
+        var focusables = Array.prototype.slice.call(document.querySelectorAll('.focusable'));
+        var currentFocusIndex = 2; // 默认聚焦
         
-        // 缓存 TMDB 热门剧集数据
-        let trendingData = {
+        var trendingData = {
             bg: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564',
             title: '无热门数据',
-            sub: '时下热门'
+            sub: '检查网络连接'
         };
 
-        // --- 1. 启动并拉取配置 ---
-        async function initApp() {
-            try {
-                const response = await fetch(CONFIG_URL);
-                if (response.ok) {
-                    globalConfig = await response.json();
-                }
-            } catch (error) {
-                console.warn("无法拉取配置", error);
-            }
+        // --- 1. 降级写法启动 ---
+        function initApp() {
+            fetch(CONFIG_URL)
+                .then(function(response) {
+                    if (response.ok) return response.json();
+                    throw new Error("Config error");
+                })
+                .then(function(data) {
+                    globalConfig = data;
+                    if(globalConfig && globalConfig.user) {
+                        document.getElementById('uiUserName').innerText = globalConfig.user.name || 'User';
+                        if(globalConfig.user.avatar_url) document.getElementById('uiAvatar').src = globalConfig.user.avatar_url;
+                    }
+                    
+                    if(globalConfig && globalConfig.cards) {
+                        setupCard('card-popcorn', globalConfig.cards.popcorn);
+                        setupCard('card-vidhub', globalConfig.cards.vidhub);
+                        setupCard('card-livetv', globalConfig.cards.livetv);
+                    }
+                    
+                    fetchTrendingShow();
+                })
+                .catch(function(error) {
+                    console.warn("无法拉取配置", error);
+                });
 
-            if(globalConfig) {
-                document.getElementById('uiUserName').innerText = globalConfig.user.name;
-                document.getElementById('uiAvatar').src = globalConfig.user.avatar_url;
-                
-                // 渲染三大金刚卡片
-                setupCard('card-popcorn', globalConfig.cards?.popcorn);
-                setupCard('card-vidhub', globalConfig.cards?.vidhub);
-                setupCard('card-livetv', globalConfig.cards?.livetv);
-                
-                // 去获取此时此刻 TMDB 全球最热的剧集
-                fetchTrendingShow();
-            }
-            
-            // 初始上焦点
             setFocus(currentFocusIndex);
         }
 
-        // 把 JSON 里的数据塞进卡片
         function setupCard(id, data) {
             if(!data) return;
-            const card = document.getElementById(id);
-            // 提前把高清壁纸赋给 data-bg，焦点移上去时就会变成背景
-            card.setAttribute('data-bg', data.image_url);
-            card.setAttribute('data-title', data.title);
-            card.setAttribute('data-sub', data.sub);
-            card.setAttribute('data-action', data.action);
+            var card = document.getElementById(id);
+            card.setAttribute('data-bg', data.image_url || '');
+            card.setAttribute('data-title', data.title || '');
+            card.setAttribute('data-sub', data.sub || '');
+            card.setAttribute('data-action', data.action || '');
             
-            card.querySelector('img').src = data.image_url;
-            card.querySelector('.card-title').innerText = data.title;
-            card.querySelector('.card-meta').innerText = data.sub;
+            var img = card.querySelector('img');
+            if(img && data.image_url) img.src = data.image_url;
+            
+            var titleEl = card.querySelector('.card-title');
+            if(titleEl) titleEl.innerText = data.title;
+            
+            var metaEl = card.querySelector('.card-meta');
+            if(metaEl) metaEl.innerText = data.sub;
         }
 
-        // --- 2. 获取 TMDB 时下热门 (用于侧边栏焦点) ---
-        async function fetchTrendingShow() {
-            const tmdbApiKey = globalConfig?.api?.tmdb_api_key;
-            if (!tmdbApiKey) return;
+        // --- 2. 降级 TMDB 拉取 ---
+        function fetchTrendingShow() {
+            if (!globalConfig || !globalConfig.api || !globalConfig.api.tmdb_api_key) return;
+            var tmdbApiKey = globalConfig.api.tmdb_api_key;
 
-            try {
-                const res = await fetch(`https://api.themoviedb.org/3/trending/tv/day?api_key=${tmdbApiKey}&language=zh-CN`);
-                const data = await res.json();
-                if (data.results && data.results.length > 0) {
-                    const show = data.results[0]; // 拿排名第一的热门剧
-                    
-                    // 组装热门数据
-                    trendingData.bg = `https://image.tmdb.org/t/p/original${show.backdrop_path}`;
-                    trendingData.title = show.name || show.title;
-                    trendingData.sub = '时下热门';
-                    
-                    // 如果当前焦点正在侧边栏，立刻刷新背景展示这波刮削的数据
-                    const currentTarget = focusables[currentFocusIndex];
-                    if (!currentTarget.classList.contains('media-item')) {
-                        updateHeroUI(trendingData.bg, trendingData.title, trendingData.sub, '很酷 TV+');
+            fetch('https://api.themoviedb.org/3/trending/tv/day?api_key=' + tmdbApiKey + '&language=zh-CN')
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data && data.results && data.results.length > 0) {
+                        var show = data.results[0];
+                        trendingData.bg = 'https://image.tmdb.org/t/p/original' + show.backdrop_path;
+                        trendingData.title = show.name || show.title;
+                        trendingData.sub = '时下热门';
+                        
+                        var currentTarget = focusables[currentFocusIndex];
+                        if (currentTarget && !currentTarget.classList.contains('media-item')) {
+                            updateHeroUI(trendingData.bg, trendingData.title, trendingData.sub, '很酷 TV+');
+                        }
                     }
-                }
-            } catch (e) {
-                console.error("抓取热门失败:", e);
-            }
+                })
+                .catch(function(e) {
+                    console.error("抓取热门失败:", e);
+                });
         }
 
-        // 刷新大文字与背景的统包函数
         function updateHeroUI(bg, title, sub, brandName) {
-            if(bg) document.getElementById('heroBg').style.backgroundImage = `url('${bg}')`;
+            if(bg) document.getElementById('heroBg').style.backgroundImage = "url('" + bg + "')";
             document.getElementById('heroTitle').innerText = title;
             document.getElementById('heroSub').innerText = sub;
-            document.getElementById('heroBrand').innerHTML = `<svg style="width:16px;height:16px;fill:#fff;" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg> ${brandName}`;
+            document.getElementById('heroBrand').innerHTML = '<svg style="width:14px;height:14px;fill:#fff;" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg> ' + brandName;
             
-            // 只有“时下热门”才用蓝色高亮
-            document.getElementById('heroSub').style.color = (sub === '时下热门') ? '#0A84FF' : 'rgba(255,255,255,0.6)';
+            document.getElementById('heroSub').style.color = (sub === '时下热门') ? '#0A84FF' : 'rgba(255,255,255,0.55)';
         }
 
-        // --- 3. 时钟 ---
+        // --- 3. 独立右上角时钟 ---
         function updateClock() {
-            const now = new Date();
-            let hours = now.getHours();
-            let minutes = now.getMinutes();
-            const ampm = hours >= 12 ? 'PM' : 'AM';
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
             hours = hours % 12 || 12; 
             minutes = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById('clock').innerText = hours + ':' + minutes + ' ' + ampm;
+            document.getElementById('topClock').innerText = hours + ':' + minutes + ' ' + ampm;
         }
         setInterval(updateClock, 1000); updateClock();
 
-        // --- 4. 空间导航逻辑 ---
+        // --- 4. 导航控制 ---
         function setFocus(index) {
             if (index < 0 || index >= focusables.length) return;
             
             focusables[currentFocusIndex].classList.remove('focused');
             currentFocusIndex = index;
-            const target = focusables[currentFocusIndex];
+            var target = focusables[currentFocusIndex];
             target.focus();
             target.classList.add('focused');
 
             if (target.classList.contains('media-item')) {
-                // 当焦点在底部卡片上时：显示卡片自身的信息
-                const bg = target.getAttribute('data-bg');
-                const title = target.getAttribute('data-title');
-                const sub = target.getAttribute('data-sub');
+                var bg = target.getAttribute('data-bg');
+                var title = target.getAttribute('data-title');
+                var sub = target.getAttribute('data-sub');
                 
                 updateHeroUI(bg, title, sub, '媒体库');
 
-                // 稍微平移一下卡片列
-                const track = document.getElementById('carouselTrack');
-                const col = parseInt(target.getAttribute('data-col'));
-                let offset = col > 1 ? (col - 1) * 254 : 0;
-                track.style.transform = `translateX(-${offset}px)`;
+                var track = document.getElementById('carouselTrack');
+                var col = parseInt(target.getAttribute('data-col'));
+                var offset = col > 1 ? (col - 1) * 240 : 0;
+                track.style.transform = 'translateX(-' + offset + 'px)';
             } else {
-                // 当焦点在左侧边栏时：恢复刮削到的 TMDB 热门内容
                 updateHeroUI(trendingData.bg, trendingData.title, trendingData.sub, '很酷 TV+');
-                document.getElementById('carouselTrack').style.transform = `translateX(0px)`;
+                document.getElementById('carouselTrack').style.transform = 'translateX(0px)';
             }
         }
 
-        document.addEventListener('keydown', (e) => {
-            const current = focusables[currentFocusIndex];
-            const row = parseInt(current.getAttribute('data-row'));
-            const col = parseInt(current.getAttribute('data-col'));
-            let nextIndex = currentFocusIndex;
+        document.addEventListener('keydown', function(e) {
+            var current = focusables[currentFocusIndex];
+            var row = parseInt(current.getAttribute('data-row'));
+            var col = parseInt(current.getAttribute('data-col'));
+            var nextIndex = currentFocusIndex;
 
             switch(e.key) {
                 case 'ArrowDown':
                     e.preventDefault();
-                    if (row < 4) nextIndex = focusables.findIndex(f => parseInt(f.getAttribute('data-row')) === row + 1);
-                    else if (row === 4) nextIndex = focusables.findIndex(f => parseInt(f.getAttribute('data-row')) === 5 && parseInt(f.getAttribute('data-col')) === 0);
+                    if (row < 4) nextIndex = focusables.findIndex(function(f) { return parseInt(f.getAttribute('data-row')) === row + 1; });
+                    else if (row === 4) nextIndex = focusables.findIndex(function(f) { return parseInt(f.getAttribute('data-row')) === 5 && parseInt(f.getAttribute('data-col')) === 0; });
                     break;
                 case 'ArrowUp':
                     e.preventDefault();
-                    if (row === 5) nextIndex = focusables.findIndex(f => parseInt(f.getAttribute('data-row')) === 4);
-                    else if (row > 0) nextIndex = focusables.findIndex(f => parseInt(f.getAttribute('data-row')) === row - 1);
+                    if (row === 5) nextIndex = focusables.findIndex(function(f) { return parseInt(f.getAttribute('data-row')) === 4; });
+                    else if (row > 0) nextIndex = focusables.findIndex(function(f) { return parseInt(f.getAttribute('data-row')) === row - 1; });
                     break;
                 case 'ArrowRight':
                     e.preventDefault();
-                    if (row === 5) nextIndex = focusables.findIndex(f => parseInt(f.getAttribute('data-row')) === 5 && parseInt(f.getAttribute('data-col')) === col + 1);
-                    else nextIndex = focusables.findIndex(f => parseInt(f.getAttribute('data-row')) === 5 && parseInt(f.getAttribute('data-col')) === 0);
+                    if (row === 5) nextIndex = focusables.findIndex(function(f) { return parseInt(f.getAttribute('data-row')) === 5 && parseInt(f.getAttribute('data-col')) === col + 1; });
+                    else nextIndex = focusables.findIndex(function(f) { return parseInt(f.getAttribute('data-row')) === 5 && parseInt(f.getAttribute('data-col')) === 0; });
                     break;
                 case 'ArrowLeft':
                     e.preventDefault();
-                    if (row === 5 && col > 0) nextIndex = focusables.findIndex(f => parseInt(f.getAttribute('data-row')) === 5 && parseInt(f.getAttribute('data-col')) === col - 1);
-                    else if (row === 5 && col === 0) nextIndex = focusables.findIndex(f => parseInt(f.getAttribute('data-row')) === 2); 
+                    if (row === 5 && col > 0) nextIndex = focusables.findIndex(function(f) { return parseInt(f.getAttribute('data-row')) === 5 && parseInt(f.getAttribute('data-col')) === col - 1; });
+                    else if (row === 5 && col === 0) nextIndex = focusables.findIndex(function(f) { return parseInt(f.getAttribute('data-row')) === 2; });
                     break;
                 case 'Enter':
                     e.preventDefault();
                     if (row === 5) {
-                        const action = current.getAttribute('data-action');
+                        var action = current.getAttribute('data-action');
                         if (window.FeelCoolTV && window.FeelCoolTV.executeAction) {
                             window.FeelCoolTV.executeAction(action, document.getElementById('heroTitle').innerText);
                         } else {
