@@ -6,13 +6,24 @@
   "api": {
     "tmdb_api_key": "f7762624a95e4c3823500736d40162cd"
   },
-  "now_watching": {
-    "tmdb_id": 95396,
-    "type": "tv", 
-    "season": 1,
-    "episode": 4
-  },
-  "player_actions": {
-    "default_media_player": "app:com.vidhub.tv"
+  "cards": {
+    "popcorn": {
+      "image_url": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=800&auto=format&fit=crop",
+      "title": "网易爆米花",
+      "sub": "在线影院",
+      "action": "app:com.netease.popcorn"
+    },
+    "vidhub": {
+      "image_url": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?q=80&w=800&auto=format&fit=crop",
+      "title": "VidHub",
+      "sub": "本地与云盘媒体库",
+      "action": "app:com.vidhub.tv"
+    },
+    "livetv": {
+      "image_url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop",
+      "title": "电视直播",
+      "sub": "CCTV & 卫视",
+      "action": "iptv:http://223.110.234.27/ott.js.chinamobile.com/PLTV/3/224/3221225560/index.m3u8"
+    }
   }
 }
