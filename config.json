@@ -6,24 +6,68 @@
   "api": {
     "tmdb_api_key": "f7762624a95e4c3823500736d40162cd"
   },
-  "cards": {
-    "popcorn": {
-      "image_url": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=800&auto=format&fit=crop",
-      "title": "网易爆米花",
-      "sub": "在线影院",
-      "action": "app:com.netease.popcorn"
-    },
-    "vidhub": {
-      "image_url": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?q=80&w=800&auto=format&fit=crop",
-      "title": "VidHub",
-      "sub": "本地与云盘媒体库",
-      "action": "app:com.vidhub.tv"
-    },
-    "livetv": {
-      "image_url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800&auto=format&fit=crop",
-      "title": "电视直播",
-      "sub": "CCTV & 卫视",
-      "action": "iptv:http://223.110.234.27/ott.js.chinamobile.com/PLTV/3/224/3221225560/index.m3u8"
-    }
+  "rows": {
+    "1": [
+      {
+        "img": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=800",
+        "bg": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=800",
+        "title": "网易爆米花",
+        "sub": "在线影院",
+        "action": "app:com.netease.filmlytv.xiaomitv"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?q=80&w=800",
+        "bg": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?q=80&w=800",
+        "title": "VidHub",
+        "sub": "云端媒体库",
+        "action": "app:com.oumi.utility.media.hub"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=800",
+        "bg": "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=800",
+        "title": "信号源",
+        "sub": "HDMI / AV",
+        "action": "app:com.xiaomi.mitv.tvplayer"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800",
+        "bg": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800",
+        "title": "本地播放器",
+        "sub": "外接设备",
+        "action": "app:com.xiaomi.mitv.mediaexplorer"
+      }
+    ],
+    "2": [
+      {
+        "img": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800",
+        "bg": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800",
+        "title": "CCTV 1",
+        "sub": "综合频道",
+        "action": "iptv:cctv1"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800",
+        "bg": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800",
+        "title": "CCTV 2",
+        "sub": "财经频道",
+        "action": "iptv:cctv2"
+      },
+      {
+        "img": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800",
+        "bg": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=800",
+        "title": "江苏卫视",
+        "sub": "地方卫视",
+        "action": "iptv:jstv"
+      }
+    ],
+    "3": [
+      {
+        "img": "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=800",
+        "bg": "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=800",
+        "title": "云视听小电视",
+        "sub": "Bilibili TV",
+        "action": "app:com.xiaodianshi.tv.yst"
+      }
+    ]
   }
 }
