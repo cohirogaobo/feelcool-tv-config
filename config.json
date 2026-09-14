@@ -43,7 +43,7 @@
         "bg": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=1920",
         "title": "CCTV 1",
         "sub": "综合频道",
-        "action": "iptv:cctv1"
+        "action": "iptv:http://223.110.234.34/ott.js.chinamobile.com/PLTV/3/224/3221227675/index.m3u8"
       },
       {
         "img": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=400",
