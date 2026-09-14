@@ -39,25 +39,32 @@
     ],
     "2": [
       {
-        "img": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=400",
-        "bg": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=1920",
-        "title": "CCTV 1",
-        "sub": "综合频道",
+        "img": "https://www.szniego.com/uploads/image/20210115/1610706526.png",
+        "bg": "https://i0.hdslb.com/bfs/archive/104497197cf24b02dc5f56c57844d360a9958420.jpg",
+        "title": "CCTV-1 综合",
+        "sub": "CMG 中央广播电视总台",
         "action": "iptv:http://223.110.234.34/ott.js.chinamobile.com/PLTV/3/224/3221227675/index.m3u8"
       },
       {
-        "img": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=400",
-        "bg": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=1920",
-        "title": "CCTV 2",
-        "sub": "财经频道",
-        "action": "iptv:cctv2"
+        "img": "https://www.szniego.com/uploads/image/20210115/1610706526.png",
+        "bg": "https://p9.itc.cn/images01/20230809/31b22765dae34f9e9a425bd28cd6dae1.jpeg",
+        "title": "CCTV-2 财经",
+        "sub": "CMG 中央广播电视总台",
+        "action": "iptv:http://223.110.234.24/ott.js.chinamobile.com/PLTV/3/224/3221227708/index.m3u8"
       },
       {
-        "img": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=400",
-        "bg": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?q=80&w=1920",
+        "img": "https://www.szniego.com/uploads/image/20210115/1610706526.png",
+        "bg": "https://i1.hdslb.com/bfs/archive/f693ff73bb182d54b4d23ed8762bd4fc479c5229.jpg",
+        "title": "CCTV-13 新闻",
+        "sub": "CMG 中央广播电视总台",
+        "action": "iptv:http://223.110.234.27/ott.js.chinamobile.com/PLTV/3/224/3221225560/index.m3u8"
+      },
+      {
+        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "江苏卫视",
-        "sub": "地方卫视",
-        "action": "iptv:jstv"
+        "sub": "江苏省广播电视总台",
+        "action": "iptv:http://223.110.234.26/ott.js.chinamobile.com/PLTV/3/224/3221227668/index.m3u8"
       }
     ],
     "3": [
