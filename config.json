@@ -9,32 +9,18 @@
   "rows": {
     "1": [
       {
-        "img": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=400",
+        "img": "https://origin.picgo.net/2026/09/16/bmh16127c50208ef0bb2.png",
         "bg": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=1920",
         "title": "网易爆米花",
-        "sub": "在线影院",
+        "sub": "智能媒体库·全能播放器",
         "action": "app:com.netease.filmlytv.xiaomitv"
       },
       {
-        "img": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?q=80&w=400",
+        "img": "https://origin.picgo.net/2026/09/16/vhb1ea9bc0aa66702ed4.png",
         "bg": "https://images.unsplash.com/photo-1594908900066-3f47337549d8?q=80&w=1920",
         "title": "VidHub",
-        "sub": "云端媒体库",
+        "sub": "高清影片视频播放器",
         "action": "app:com.oumi.utility.media.hub"
-      },
-      {
-        "img": "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=400",
-        "bg": "https://images.unsplash.com/photo-1593784991095-a205069470b6?q=80&w=1920",
-        "title": "信号源",
-        "sub": "HDMI / AV",
-        "action": "app:com.xiaomi.mitv.tvplayer"
-      },
-      {
-        "img": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=400",
-        "bg": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1920",
-        "title": "本地播放器",
-        "sub": "外接设备",
-        "action": "app:com.xiaomi.mitv.mediaexplorer"
       }
     ],
     "2": [
@@ -69,10 +55,17 @@
     ],
     "3": [
       {
-        "img": "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=400",
+        "img": "https://origin.picgo.net/2026/09/16/xds11962b947b71962bf.png",
         "bg": "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1920",
         "title": "云视听小电视",
-        "sub": "Bilibili TV",
+        "sub": "你感兴趣的视频都在B站",
+        "action": "app:com.xiaodianshi.tv.yst"
+      },
+      {
+        "img": "https://origin.picgo.net/2026/09/16/xds11962b947b71962bf.png",
+        "bg": "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1920",
+        "title": "银河奇异果",
+        "sub": "热门独播剧集在线观看",
         "action": "app:com.xiaodianshi.tv.yst"
       }
     ]
