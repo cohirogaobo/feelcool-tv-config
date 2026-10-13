@@ -49,14 +49,56 @@
         "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "江苏卫视",
-        "sub": "江苏省广播电视总台",
+        "sub": "JSBC 江苏省广播电视总台",
         "action": "iptv:http://223.110.234.26/ott.js.chinamobile.com/PLTV/3/224/3221227668/index.m3u8"
       },
       {
         "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "浙江卫视",
+        "sub": "ZMG 浙江广播电视集团",
+        "action": "iptv:http://223.110.234.31/ott.js.chinamobile.com/PLTV/3/224/3221227744/index.m3u8"
+      },
+      {
+        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "北京卫视",
+        "sub": "BRTV 北京广播电视台",
+        "action": "iptv:http://223.110.234.25/ott.js.chinamobile.com/PLTV/3/224/3221227652/index.m3u8"
+      },
+      {
+        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "湖南卫视",
+        "sub": "湖南广播电视台",
+        "action": "iptv:http://223.110.234.32/ott.js.chinamobile.com/PLTV/3/224/3221227735/index.m3u8"
+      },
+      {
+        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "广东卫视",
+        "sub": "广东广播电视台",
+        "action": "iptv:http://223.110.234.34/ott.js.chinamobile.com/PLTV/3/224/3221227673/index.m3u8"
+      },
+      {
+        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "东方卫视",
+        "sub": "SMG 上海文化广播影视集团有限公司",
+        "action": "iptv:http://223.110.234.28/ott.js.chinamobile.com/PLTV/3/224/3221227732/index.m3u8"
+      },
+      {
+        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "CNA 亚洲新闻台",
+        "sub": "MediaCorp 新加坡新传媒集团",
+        "action": "iptv:https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8"
+      },
+      {
+        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "NTVNews24",
-        "sub": "日本电视新闻网",
+        "sub": "NNN 日本电视新闻网",
         "action": "sniff:https://news.ntv.co.jp/live"
       }
     ],
