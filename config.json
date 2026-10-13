@@ -1,7 +1,7 @@
 {
   "user": {
     "name": "扣扣扣漏",
-    "avatar_url": "https://github.com/cohirogaobo/feelcool/tree/main/assets/GB.jpg"
+    "avatar_url": "https://cdn.jsdelivr.net/gh/cohirogaobo/feelcool@main/assets/GB.jpg"
   },
   "api": {
     "tmdb_api_key": "f7762624a95e4c3823500736d40162cd"
@@ -25,7 +25,7 @@
     ],
     "2": [
       {
-        "img": "https://github.com/fanmingming/live/blob/main/tv/CCTV1.png",
+        "img": "https://live.fanmingming.com/tv/CCTV1.png",
         "bg": "https://i0.hdslb.com/bfs/archive/104497197cf24b02dc5f56c57844d360a9958420.jpg",
         "title": "CCTV-1 综合",
         "sub": "CMG 中央广播电视总台",
