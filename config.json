@@ -25,7 +25,7 @@
     ],
     "2": [
       {
-        "img": "https://www.szniego.com/uploads/image/20210115/1610706526.png",
+        "img": "https://github.com/fanmingming/live/blob/main/tv/CCTV1.png",
         "bg": "https://i0.hdslb.com/bfs/archive/104497197cf24b02dc5f56c57844d360a9958420.jpg",
         "title": "CCTV-1 综合",
         "sub": "CMG 中央广播电视总台",
@@ -70,14 +70,14 @@
         "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "湖南卫视",
-        "sub": "湖南广播电视台",
+        "sub": "湖南广播影视集团有限公司",
         "action": "iptv:http://223.110.234.32/ott.js.chinamobile.com/PLTV/3/224/3221227735/index.m3u8"
       },
       {
         "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "广东卫视",
-        "sub": "广东广播电视台",
+        "sub": "GRT 广东广播电视台",
         "action": "iptv:http://223.110.234.34/ott.js.chinamobile.com/PLTV/3/224/3221227673/index.m3u8"
       },
       {
