@@ -32,63 +32,63 @@
         "action": "iptv:http://223.110.234.34/ott.js.chinamobile.com/PLTV/3/224/3221227675/index.m3u8"
       },
       {
-        "img": "https://www.szniego.com/uploads/image/20210115/1610706526.png",
+        "img": "https://live.fanmingming.com/tv/CCTV2.png",
         "bg": "https://p9.itc.cn/images01/20230809/31b22765dae34f9e9a425bd28cd6dae1.jpeg",
         "title": "CCTV-2 财经",
         "sub": "CMG 中央广播电视总台",
         "action": "iptv:http://223.110.234.24/ott.js.chinamobile.com/PLTV/3/224/3221227708/index.m3u8"
       },
       {
-        "img": "https://www.szniego.com/uploads/image/20210115/1610706526.png",
+        "img": "https://live.fanmingming.com/tv/CCTV13.png",
         "bg": "https://i1.hdslb.com/bfs/archive/f693ff73bb182d54b4d23ed8762bd4fc479c5229.jpg",
         "title": "CCTV-13 新闻",
         "sub": "CMG 中央广播电视总台",
         "action": "iptv:http://223.110.234.27/ott.js.chinamobile.com/PLTV/3/224/3221225560/index.m3u8"
       },
       {
-        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "img": "https://live.fanmingming.com/tv/江苏卫视.png",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "江苏卫视",
         "sub": "JSBC 江苏省广播电视总台",
         "action": "iptv:http://223.110.234.26/ott.js.chinamobile.com/PLTV/3/224/3221227668/index.m3u8"
       },
       {
-        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "img": "https://live.fanmingming.com/tv/浙江卫视.png",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "浙江卫视",
         "sub": "ZMG 浙江广播电视集团",
         "action": "iptv:http://223.110.234.31/ott.js.chinamobile.com/PLTV/3/224/3221227744/index.m3u8"
       },
       {
-        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "img": "https://live.fanmingming.com/tv/北京卫视.png",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "北京卫视",
         "sub": "BRTV 北京广播电视台",
         "action": "iptv:http://223.110.234.25/ott.js.chinamobile.com/PLTV/3/224/3221227652/index.m3u8"
       },
       {
-        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "img": "https://live.fanmingming.com/tv/湖南卫视.png",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "湖南卫视",
         "sub": "湖南广播影视集团有限公司",
         "action": "iptv:http://223.110.234.32/ott.js.chinamobile.com/PLTV/3/224/3221227735/index.m3u8"
       },
       {
-        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "img": "https://live.fanmingming.com/tv/广东卫视.png",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "广东卫视",
         "sub": "GRT 广东广播电视台",
         "action": "iptv:http://223.110.234.34/ott.js.chinamobile.com/PLTV/3/224/3221227673/index.m3u8"
       },
       {
-        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "img": "https://live.fanmingming.com/tv/东方卫视.png",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "东方卫视",
         "sub": "SMG 上海文化广播影视集团有限公司",
         "action": "iptv:http://223.110.234.28/ott.js.chinamobile.com/PLTV/3/224/3221227732/index.m3u8"
       },
       {
-        "img": "https://pic.rmb.bdstatic.com/bjh/241125/dump/8d79bc0bf93552a45e3956c85d96abf2.jpeg",
+        "img": "https://live.fanmingming.com/tv/亚洲新闻.png",
         "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
         "title": "CNA 亚洲新闻台",
         "sub": "MediaCorp 新加坡新传媒集团",
