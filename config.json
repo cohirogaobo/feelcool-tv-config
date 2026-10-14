@@ -39,6 +39,13 @@
         "action": "iptv:http://223.110.234.24/ott.js.chinamobile.com/PLTV/3/224/3221227708/index.m3u8"
       },
       {
+        "img": "https://live.fanmingming.com/tv/CCTV9.png",
+        "bg": "https://p9.itc.cn/images01/20230809/31b22765dae34f9e9a425bd28cd6dae1.jpeg",
+        "title": "CCTV-9 纪录",
+        "sub": "CMG 中央广播电视总台",
+        "action": "iptv:http://223.110.234.33/ott.js.chinamobile.com/PLTV/3/224/3221227659/index.m3u8"
+      },
+      {
         "img": "https://live.fanmingming.com/tv/CCTV13.png",
         "bg": "https://i1.hdslb.com/bfs/archive/f693ff73bb182d54b4d23ed8762bd4fc479c5229.jpg",
         "title": "CCTV-13 新闻",
@@ -86,6 +93,76 @@
         "title": "东方卫视",
         "sub": "SMG 上海文化广播影视集团有限公司",
         "action": "iptv:http://223.110.234.28/ott.js.chinamobile.com/PLTV/3/224/3221227732/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/黑龙江卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "黑龙江卫视",
+        "sub": "黑龙江广播电视台",
+        "action": "iptv:http://223.110.234.24/ott.js.chinamobile.com/PLTV/3/224/3221227662/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/深圳卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "深圳卫视",
+        "sub": "SZMG 深圳广播电影电视集团‌",
+        "action": "iptv:http://223.110.234.26/ott.js.chinamobile.com/PLTV/3/224/3221227677/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/山东卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "山东卫视",
+        "sub": "山东广播电视台",
+        "action": "iptv:http://223.110.234.26/ott.js.chinamobile.com/PLTV/3/224/3221227671/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/天津卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "天津卫视",
+        "sub": "天津海河传媒中心",
+        "action": "iptv:http://223.110.234.29/ott.js.chinamobile.com/PLTV/3/224/3221227741/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/湖北卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "湖北卫视",
+        "sub": "湖北长江广电传媒集团",
+        "action": "iptv:http://223.110.234.28/ott.js.chinamobile.com/PLTV/3/224/3221227665/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/重庆卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "重庆卫视",
+        "sub": "重庆广播电视集团 (总台) ",
+        "action": "iptv:http://223.110.234.30/ott.js.chinamobile.com/PLTV/3/224/3221227729/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/安徽卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "安徽卫视",
+        "sub": "安徽广播电视台",
+        "action": "iptv:http://223.110.234.26/ott.js.chinamobile.com/PLTV/3/224/3221227653/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/江西卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "江西卫视",
+        "sub": "江西广播电视台",
+        "action": "iptv:http://223.110.234.26/ott.js.chinamobile.com/PLTV/3/224/3221227738/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/辽宁卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "辽宁卫视",
+        "sub": "辽宁广播电视台",
+        "action": "iptv:http://223.110.234.25/ott.js.chinamobile.com/PLTV/3/224/3221227676/index.m3u8"
+      },
+      {
+        "img": "https://live.fanmingming.com/tv/东南卫视.png",
+        "bg": "https://bkimg.cdn.bcebos.com/pic/a5c27d1ed21b0ef41bd5ea1da99646da81cb39db906c",
+        "title": "东南卫视",
+        "sub": "福建省广播影视集团",
+        "action": "iptv:http://223.110.234.24/ott.js.chinamobile.com/PLTV/3/224/3221227670/index.m3u8"
       },
       {
         "img": "https://live.fanmingming.com/tv/亚洲新闻.png",
